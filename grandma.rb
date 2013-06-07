@@ -1,23 +1,30 @@
-response = gets.chomp
-password = 'BYE'
+#Adam
+#Version 2
+#Deaf Grandma program
 counter = 0
+puts 'Hi Sweety pie'
+while true
+	say = gets.chomp!
 
+	#Increment counter if user input is correct
+	if say == "BYE"
+		counter += 1
+	#reset counter if above condition is false
+	else
+		counter = 0
+	end
 
-while counter < 1
-
-	if response == response.upcase
-		puts 'NO, NOT SINCE 19' + rand(100).to_s + '!!'
-		response = gets.chomp
-			
-	elsif response != response.upcase
+	#If letters are not uppercase execute first conditon
+	unless say == say.upcase
 		puts 'HUH?! SPEAK UP, SONNY!'
-		response = gets.chomp
+	#Execute this condition if letters are uppper case
+	else
+		puts 'NO, NOT SINCE 19' + rand(30..50).to_s + '!'
 	end
-	
-	if response == password
-		counter = counter + 1
-		response = gets.chomp
-		puts counter
+
+	#Condition to break the loop
+	if counter == 3
+		puts 'BYE MY GRANDCHILD'
+		break
 	end
-	
 end

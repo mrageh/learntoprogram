@@ -1,10 +1,11 @@
-array = []
-puts 'Please enter one word per line'
-while true
-	arr = gets.chomp
-	if arr == ''
-	 break
+puts 'Please enter a word below and when you are ready to finish just press enter'
+list_of_words = []
+while true 
+	word = gets.chomp
+	if word == ''
+		break
 	end
-	array.push arr
+	
+	list_of_words << word
 end
-puts array.sort
+puts list_of_words.sort
